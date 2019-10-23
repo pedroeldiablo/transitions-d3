@@ -49,6 +49,7 @@ d3.select('input')
       .data(birthData.filter(function(d) {
         return d.year === year;
       }))
+      .transition()
       .attr('height', function(d) {
         return height - yScale(d.births);
       })
