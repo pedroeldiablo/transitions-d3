@@ -50,6 +50,9 @@ d3.select('input')
         return d.year === year;
       }))
       .transition()
+      .duration(2000)
+      .ease(d3.easeLinear)
+      .delay(( d, i) => i * 150 )
       .attr('height', function(d) {
         return height - yScale(d.births);
       })
